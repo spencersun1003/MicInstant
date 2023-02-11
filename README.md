@@ -62,9 +62,14 @@ For figure 3, blue box is what we want to add to the real UI. Luckily, we can ad
 
 ### 4. Fuction Implementation
 
+![](/ReadmeImg/Gesture.svg)
+![](/ReadmeImg/TapTap.svg)
+![](/ReadmeImg/Control.svg)
+
 ## Teamwork
 
 Yue Sun: Software Developer
+
 Evie Mo, Linda Huang: Designer
 
 This project is implemented based on PyTorch template.
