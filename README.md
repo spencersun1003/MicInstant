@@ -33,7 +33,8 @@ We summarize the main scenarios to optimize as shown in the figure.
 Here we propose a plugin to optimize Tencent Meeting by controlling the microphone based on
 intelligent context aware. To be specific, in a online and in person combined classroom, students who attend in person could invert their phone to start talking, and the plugin
 will make sure there would be only one person talking at a time. On the contrary, for students attend online, the plugin automatically controls the microphone
-on and off according to hand/head gesture, speech detection and talker recognition.
+on and off according to hand/head gesture, speech detection and talker recognition. With this App, user attends the meeting outdoor could control the microphone by simply tapping his
+ pocket where the phone inside. 
 
 ![](/ReadmeImg/Solution.svg)
 
