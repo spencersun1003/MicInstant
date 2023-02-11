@@ -1,36 +1,50 @@
 <<<<<<< HEAD
 # MicInstant
-Virtual Meeting Optimization Mobile APP Based on Intelligent Context Aware
-=======
-# Speech Recognition on Android with Wav2Vec2
+Virtual Meeting Optimization Mobile APP Based on Intelligent Context Aware. A final project for HCIT course in Tsinghua University.
 
 ## Introduction
 
-Facebook AI's [wav2vec 2.0](https://github.com/pytorch/fairseq/tree/master/examples/wav2vec) is one of the leading models in speech recognition. It is also available in the [Huggingface Transformers](https://github.com/huggingface/transformers) library, which is also used in another PyTorch Android demo app for [Question Answering](https://github.com/pytorch/android-demo-app/tree/master/QuestionAnswering).
+Virtual meeting has been a common scenario. However, existing meeting App has some sore points affecting user experience.
+In this work, we collected 100 questionnaires to verify our hypothesis. We proposed and implemented our solution and further performed
+user study to verify the validity of our scheme.
 
-In this demo app, we'll show how to quantize, trace, and optimize the wav2vec2 model, powered by the newly released torchaudio 0.9.0, and how to use the converted model on an Android demo app to perform speech recognition.
 
 ## Prerequisites
 
-* PyTorch 1.9.0 and torchaudio 0.9.0 (Optional)
 * Python 3.8 (Optional)
-* Android Pytorch library org.pytorch:pytorch_android_lite:1.9.0
 * Android Studio 4.0.1 or later
 
-## Quick Start
+## Background
 
-### 1. Get the Repo
+We select Tencent Meeting, the most common virtural meeting software in China, as our research traget. We collected 100 questionnaires.
+ 80% of the subjects use this platform at least 2 times a week. However, the possibility of having problems in the meeting is nearly 20%. 
 
-Simply run the commands below:
+![](/ReadmeImg/Survey1.svg)
 
-```
-git clone https://github.com/pytorch/android-demo-app
-cd android-demo-app/SpeechRecognition
-```
+We listed more than a dozen possible scenarios and found that there is a high concentration of problems that occur most frequently in three scenarios.
++ Multiple microphones turned on at the same time causing echo and whistling
++ Need to turn off the microphone when not speaking because of loud ambient noise
++ Forget to turn off the microphone after speaking
++ Speaking with other people at the same time
 
-If you don't have PyTorch 1.9.0 and torchaudio 0.9.0 installed or want to have a quick try of the demo app, you can download the quantized scripted wav2vec2 model file [here](https://drive.google.com/file/d/1xMh-BZMSIeoohBfZvQFYcemmh5zUn_gh/view?usp=sharing), then drag and drop it to the `app/src/main/assets` folder inside  `android-demo-app/SpeechRecognition`, and continue to Step 3.
+![](/ReadmeImg/Survey.svg)
 
-### 2. Prepare the Model
+We summarize the main scenarios to optimize as shown in the figure.
+
+![](/ReadmeImg/Scenario.svg)
+
+## Solution and Implementation
+
+### 1. Solution
+
+Here we propose a plugin to optimize Tencent Meeting by controlling the microphone based on
+intelligent context aware. To be specific, in a online and in person combined classroom, students who attend in person could invert their phone to start talking, and the plugin
+will make sure there would be only one person talking at a time. On the contrary, for students attend online, the plugin automatically controls the microphone
+on and off according to hand/head gesture, speech detection and talker recognition.
+
+![](/ReadmeImg/Solution.svg)
+
+### 2. Program Structure
 
 To install PyTorch 1.9.0, torchaudio 0.9.0 and the Hugging Face transformers, you can do something like this:
 
