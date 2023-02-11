@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # MicInstant
 Virtual Meeting Optimization Mobile APP Based on Intelligent Context Aware. A final project for HCIT course in Tsinghua University.
 
@@ -7,12 +6,6 @@ Virtual Meeting Optimization Mobile APP Based on Intelligent Context Aware. A fi
 Virtual meeting has been a common scenario. However, existing meeting App has some sore points affecting user experience.
 In this work, we collected 100 questionnaires to verify our hypothesis. We proposed and implemented our solution and further performed
 user study to verify the validity of our scheme.
-
-
-## Prerequisites
-
-* Python 3.8 (Optional)
-* Android Studio 4.0.1 or later
 
 ## Background
 
@@ -46,32 +39,33 @@ on and off according to hand/head gesture, speech detection and talker recogniti
 
 ### 2. Program Structure
 
-To install PyTorch 1.9.0, torchaudio 0.9.0 and the Hugging Face transformers, you can do something like this:
+It costs much to reverse the built Tencent Meeting App or reach out the developer for source code to test our solution. Instead, we implement a fake UI covering on the real UI using accessibility to
+modify the origin application without touching the source code of it.
+We divide the whole program into two kinds of service.
++ The UI service can be subdivided into accessibility service to manage the real TM UI, and the float window service is to manage fake UI.
++ As for data service, we have sensor thread for gesture detection, audio service for speech detection and voice print check, and microphone manage thread to manage the microphone state
 
-```
-conda create -n wav2vec2 python=3.8.5
-conda activate wav2vec2
-pip install torch torchaudio
-pip install transformers
-```
+![](/ReadmeImg/ProgramStructure.svg)
 
-Now with PyTorch 1.9.0 and torchaudio 0.9.0 installed, run the following commands on a Terminal:
+### 3. Key Point - UI Implementation
 
-```
-python create_wav2vec2.py
-```
-This will create the PyTorch mobile interpreter model file `wav2vec2.ptl`. Copy it to the Android app:
-```
+Here we demonstrate the principle. 
 
-mkdir -p app/src/main/assets
-cp wav2vec2.pt app/src/main/assets
-```
+![](/ReadmeImg/UI1.svg)
 
-### 2. Build and run with Android Studio
+For fast meeting page, real UI is leftside and fake UI is right side. Red box encircles what we want to add to the real UI. Since we don’t have space to place additional component on the real UI, we have to re-implement a full screen float window that looks like real UI but a new row is added.
+The float window is circled by blue box.
+When user touch in the main menu to switch the page to this one, we directly cover the fake UI on the real one. 
+For figure 3, blue box is what we want to add to the real UI. Luckily, we can add the button on the top of “entrance setting column”, so all we need to do is just implement a single row. When user touch the fast meeting button in main menu, we show the fake UI and cover it exactly on the word ”Settings”.
 
-Start Android Studio, open the project located in `android-demo-app/SpeechRecognition`, build and run the app on an Android device. After the app runs, tap the Start button and start saying something; after 6 seconds (you can change `private final static int AUDIO_LEN_IN_SECOND = 6;` in `MainActivity.java` for a shorter or longer recording length), the model will infer to recognize your speech. Some example recognition results are:
+![](/ReadmeImg/UI2.svg)
 
-![](screenshot1.png)
-![](screenshot2.png)
-![](screenshot3.png)
->>>>>>> 1ab8eb7 (Main)
+### 4. Fuction Implementation
+
+## Teamwork
+
+Yue Sun: Software Developer
+Evie Mo, Linda Huang: Designer
+
+This project is implemented based on PyTorch template.
+
