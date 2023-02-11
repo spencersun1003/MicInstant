@@ -75,3 +75,5 @@ Evie Mo, Linda Huang: Designer
 
 This project is implemented based on PyTorch template.
 
+Date: 06/08/2022
+
