@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="14dp"
+                android:layout_height="43dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="多人共用麦克风"
+                android:textColor="#363636"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="413dp" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:id="@+id/swMultiMic"
+                tools:layout_editor_absoluteX="278dp"
+                tools:layout_editor_absoluteY="414dp"
+
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:theme="@style/SCBSwitch"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="41dp"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

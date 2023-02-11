@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorBabyBlue">#03A9F4</color>
+    <color name="probarEmoAnger">#FFC6C0</color>
+    <color name="probarEmoNetrual">#7FE3F0</color>
+    <color name="probarEmoBackground">#7265E3</color>
+</resources>

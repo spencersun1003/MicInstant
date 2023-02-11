@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="414dp"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="410dp"
+        android:layout_height="43dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <Switch
+        android:id="@+id/swPersonalNum"
+        android:layout_width="79dp"
+        android:layout_height="27dp"
+
+        android:checked="true"
+        android:theme="@style/SCBSwitch"
+        android:thumb="@drawable/switch_thumb"
+        android:track="@drawable/switch_track"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="513 645 9673"
+        android:textColor="#888888"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.822" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用个人会议号"
+        android:textColor="#363636"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <Button
+        android:id="@+id/bStartMeeting"
+        android:layout_width="362dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="24dp"
+        android:background="#2F6DF4"
+        android:text="进入会议"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <Button
+        android:id="@+id/bCancel"
+        android:layout_width="47dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/circular_progress_bar"
+        android:text="取消"
+        android:textColor="#363636"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快速会议"
+        android:textColor="#363636"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.578" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="413dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view14"
+                android:layout_width="30dp"
+                android:layout_height="43dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="多人共用麦克风"
+                android:textColor="#363636"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="413dp" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:id="@+id/swMultiMic"
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:theme="@style/SCBSwitch"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                tools:layout_editor_absoluteX="278dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="41dp"
+                android:layout_height="match_parent" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="30dp"
+                android:layout_height="43dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="开启视频"
+                android:textColor="#363636"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="85dp"
+                tools:layout_editor_absoluteY="413dp" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:id="@+id/swVideo"
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:theme="@style/SCBSwitch"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                tools:layout_editor_absoluteX="278dp"
+                tools:layout_editor_absoluteY="414dp" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="41dp"
+                android:layout_height="match_parent" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"><![CDATA[>
+
+            ]]>
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="30dp"
+                android:layout_height="43dp" />
+
+            <TextView
+                android:id="@+id/tvBeauty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="开启美颜"
+                android:textColor="#363636"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <Switch
+                android:id="@+id/swBeauty"
+                android:layout_width="79dp"
+                android:layout_height="27dp"
+
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:theme="@style/SCBSwitch"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="41dp"
+                android:layout_height="match_parent" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/view12"
+                android:layout_width="30dp"
+                android:layout_height="43dp" />
+
+            <TextView
+                android:id="@+id/tvBeauty3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="美颜设置"
+                android:textColor="#363636"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view13"
+                android:layout_width="165dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/bBeautySet"
+                android:layout_width="75dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center_vertical"
+                android:background="#00FFFFFF"
+                android:text="点击设置 >"
+                android:textColor="#3F51B5"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/swVideo2"
+                app:layout_constraintTop_toTopOf="@+id/textView6"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="41dp"
+                android:layout_height="match_parent" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
